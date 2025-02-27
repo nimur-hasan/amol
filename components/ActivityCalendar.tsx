@@ -4,7 +4,7 @@ import React from "react";
 import CalendarHeatmap from "react-calendar-heatmap";
 import "react-calendar-heatmap/dist/styles.css";
 import { Tooltip } from "react-tooltip";
-import { subDays, format } from "date-fns";
+import { subDays } from "date-fns";
 
 type Activity = {
   date: string;
@@ -29,12 +29,12 @@ const ActivityCalendar: React.FC<Props> = ({ data }) => {
           if (!value) return "color-empty";
           return `color-scale-${Math.min(value.count, 4)}`;
         }}
-        tooltipDataAttrs={(value) => ({
-          "data-tooltip-id": "tooltip",
-          "data-tooltip-content": value.date
-            ? `${value.date}: ${value.count} activities`
-            : "No activity",
-        })}
+        // tooltipDataAttrs={(value) => ({
+        //   "data-tooltip-id": "tooltip",
+        //   "data-tooltip-content": value.date
+        //     ? `${value.date}: ${value.count} activities`
+        //     : "No activity",
+        // })}
       />
       <Tooltip id="tooltip" />
       <style jsx>{`

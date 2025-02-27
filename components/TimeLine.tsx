@@ -1,4 +1,3 @@
-import { CircleCheck } from "lucide-react";
 import React from "react";
 import Item from "./Item";
 

@@ -1,8 +1,6 @@
 import ActivityCalendar from "@/components/ActivityCalendar";
 import Counter from "@/components/Counter";
-import PlanSummary from "@/components/PlanSummary";
 import TimeLine from "@/components/TimeLine";
-import Image from "next/image";
 
 export default function Home() {
   const mockData = [
